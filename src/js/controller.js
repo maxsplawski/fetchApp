@@ -11,8 +11,6 @@ const controlBreeds = async function () {
     await model.loadBreeds(id);
 
     breedsView.render(model.state.breeds.data);
-    console.log(model.state.breeds.data);
-    console.log('hi');
   } catch (err) {
     alert(err);
   }
@@ -20,11 +18,11 @@ const controlBreeds = async function () {
 
 const controlImage = async function () {
   try {
-    const id = window.location.hash;
+    const id = window.location.hash.slice(1);
 
     imageView.renderSpinner();
 
-    await model.getImage(id);
+    await model.loadImage(id);
 
     imageView.render(model.state.image);
   } catch (err) {}
@@ -32,7 +30,7 @@ const controlImage = async function () {
 
 const init = function () {
   controlBreeds();
-  // controlImage();
+  imageView.addHandlerRender(controlImage);
 };
 
 init();
