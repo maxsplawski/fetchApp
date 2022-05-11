@@ -1,4 +1,5 @@
 import * as model from './model.js';
+import againButtonView from './views/againButtonView.js';
 import breedsView from './views/breedsView.js';
 import imageView from './views/imageView.js';
 
@@ -20,6 +21,8 @@ const controlImage = async function () {
   try {
     const id = window.location.hash.slice(1);
 
+    if (!id) return;
+
     imageView.renderSpinner();
 
     await model.loadImage(id);
@@ -29,8 +32,10 @@ const controlImage = async function () {
 };
 
 const init = function () {
-  controlBreeds();
+  breedsView.addHandlerLoad(controlBreeds);
+  breedsView.addHandlerClick(controlImage);
   imageView.addHandlerRender(controlImage);
+  againButtonView.addHandlerClick(controlImage);
 };
 
 init();

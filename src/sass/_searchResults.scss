@@ -1,0 +1,21 @@
+.searchResultsContainer {
+  width: 50%;
+
+  &__results {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__breedLink {
+    text-decoration: none;
+    color: $color-white;
+
+    &:active {
+      color: red;
+    }
+  }
+}

@@ -4,12 +4,12 @@ class ImageView extends View {
   _parentElement = document.querySelector('.imageContainer');
 
   addHandlerRender(handler) {
-    ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
+    window.addEventListener('hashchange', handler);
   }
 
   _generateMarkup() {
     return `
-        <div>
+        <div class="imageContainer__img">
             <img src="${this._data}"
         <div>
       `;

@@ -27,8 +27,6 @@ export const loadImage = async function (id) {
     const data = await getJSON(`${API_URL_IMAGE}/${id}/images/random
     `);
 
-    console.log(data);
-
     const { message } = data;
 
     state.image = message;

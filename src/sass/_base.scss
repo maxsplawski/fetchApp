@@ -40,12 +40,19 @@ html {
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: #fff;
   background-image: $gradient;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
