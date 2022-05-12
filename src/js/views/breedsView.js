@@ -37,7 +37,9 @@ class BreedsView extends View {
             ${this._data
               .map(breed => {
                 return `
-                  <li><a class="searchResultsContainer__breedLink" href="#${breed}">${breed}</a></li>
+                  <li><a class="searchResultsContainer__breedLink" href="#${breed}">${
+                  breed.charAt(0).toUpperCase() + breed.slice(1)
+                }</a></li>
               `;
               })
               .join('')}
