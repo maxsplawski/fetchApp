@@ -8,10 +8,25 @@ class BreedsView extends View {
   }
 
   addHandlerClick(handler) {
-    this._parentElement.addEventListener('click', function (e) {
+    const parentElement = this._parentElement;
+
+    parentElement.addEventListener('click', function (e) {
+      const btns = parentElement.querySelectorAll(
+        '.searchResultsContainer__breedLink'
+      );
+      const btnsArr = [...btns];
+
       const btn = e.target.closest('.searchResultsContainer__breedLink');
 
       if (!btn) return;
+
+      btnsArr.forEach(btn => {
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active');
+        }
+      });
+
+      btn.classList.add('active');
 
       handler();
     });

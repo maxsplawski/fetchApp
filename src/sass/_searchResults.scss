@@ -15,7 +15,11 @@
     color: $color-white;
 
     &:active {
-      color: red;
+      color: $color-white-active;
     }
+  }
+
+  .active {
+    color: $color-white-active;
   }
 }
