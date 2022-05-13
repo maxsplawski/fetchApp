@@ -1,8 +1,7 @@
 {
-  "name": "apiapp",
+  "name": "fetchapp",
   "version": "1.0.0",
-  "description": "An app",
-  "main": "index.js",
+  "description": "Dog images fetching app.",
   "scripts": {
     "start": "parcel index.html"
   },

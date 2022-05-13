@@ -1,4 +1,4 @@
-import { API_URL, API_URL_ALL_BREEDS, API_URL_IMAGE } from './config';
+import { API_URL_ALL_BREEDS, API_URL_IMAGE } from './config';
 import { getJSON } from './helpers';
 
 export const state = {

@@ -28,7 +28,9 @@ const controlImage = async function () {
     await model.loadImage(id);
 
     imageView.render(model.state.image);
-  } catch (err) {}
+  } catch (err) {
+    alert(err);
+  }
 };
 
 const init = function () {
