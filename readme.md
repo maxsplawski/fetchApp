@@ -1,10 +1,10 @@
-# fetchApp
+# 🪃🐶 fetchApp
 
 Use this app to fetch a random dog image, browsing from 95 different breeds. Happy fetching!
 
 ## Getting Started
 
-Use this instrutctions to get you a copy of the app up and running on your local machine.
+Use this instructions to get you a copy of the app up and running on your local machine.
 
 ### Installing
 
